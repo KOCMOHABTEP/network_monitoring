@@ -1,0 +1,17 @@
+{
+  "name": "webtemplate-bootstrap",
+  "version": "1.0.0",
+  "homepage": "https://github.com/KOCMOHABTEP",
+  "authors": [
+    "Dmitriy Smirnov // Mail: web@smirnovdm.ru"
+  ],
+  "description": "Webpack for WEB",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "*",
+    "jquery.maskedinput": "*"
+  }
+}

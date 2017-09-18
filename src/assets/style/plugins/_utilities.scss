@@ -1,0 +1,19 @@
+// 
+// Default mixins
+//
+
+// Hover
+@mixin hover {
+	&:hover,
+	.hover {
+		@content;
+	}
+}
+
+// Focus
+@mixin focus {
+	&:focus,
+	.focus {
+		@content;
+	}
+}

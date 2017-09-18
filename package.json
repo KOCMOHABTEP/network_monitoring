@@ -1,0 +1,34 @@
+{
+  "name": "webtemplate-bootstrap",
+  "version": "1.0.1",
+  "description": "Web pack for frontend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KOCMOHABTEP"
+  },
+  "dependencies": {
+    "babel-preset-env": "*",
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-babel": "*",
+    "gulp-clean-css": "*",
+    "gulp-eslint": "*",
+    "gulp-file-include": "*",
+    "gulp-imagemin": "*",
+    "gulp-plumber": "*",
+    "gulp-pug": "*",
+    "gulp-pug-linter": "*",
+    "gulp-rename": "*",
+    "gulp-rigger": "*",
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
+    "gulp-wait": "*",
+    "gulp-watch": "*",
+    "imagemin-pngquant": "*",
+    "rimraf": "*"
+  },
+  "devDependencies": {
+    "babel-core": "*"
+  }
+}

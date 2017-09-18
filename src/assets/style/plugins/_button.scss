@@ -1,0 +1,29 @@
+//
+// Creating button
+//
+@mixin button($color-bg, $padding: 0) {
+
+	@include hover {
+		text-decoration: none;
+		outline: none;
+		background: $color-bg-hover;
+	}
+	@include focus {
+		text-decoration: none;
+		outline: none;
+		background: $color-bg-hover;
+	}
+	
+	display: inline-block;
+	padding: $padding;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.5s linear;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-decoration: none;
+	border: none;
+	outline: none;
+    background: $color-bg;
+}

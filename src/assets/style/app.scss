@@ -1,0 +1,32 @@
+//
+// 'IMPORT FILE' | Import all style's in this file.
+//
+
+// Load Remcalc
+@import "./plugins/remcalc";
+
+// Load Varibles
+@import "./plugins/vars";
+
+// Load Mixins
+@import "./plugins/mixins.scss";
+
+// Load Utilities
+@import "./plugins/utilities.scss";
+
+// Load Button styles
+@import "./plugins/button.scss";
+
+// Load Media Queries
+@import "./plugins/media.scss";
+
+// Load Modal window
+@import "./plugins/modal.scss";
+
+// Load Main
+@import "./partials/main.scss";
+
+
+
+
+
