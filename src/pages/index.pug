@@ -1,5 +1,7 @@
 include partials/header.pug
 body
+	.preloader-overlay
+		.preloader-content
 	h1 Hello, it's me... Mario
 	h2 Hello, it's me... Mario
 	h3 Hello, it's me... Mario
@@ -12,9 +14,12 @@ body
 
 	.container 
 		.row
-			.col Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam cumque sed vero ullam illo saepe in optio quidem, amet ipsum nesciunt dolore harum quo, neque, expedita veritatis quod necessitatibus.
+			.col Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam cumque sed vero ullam illo saepe in optio quidem, amet ipsum nesciunt dolore harum quo, neque, expedita veritatis quod necessitatibus.<br>
+				a(href="#") Link
 			.col Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam nemo, labore necessitatibus sint commodi aliquam. Impedit laudantium accusamus, enim sint ad consequuntur iste, sunt nulla, dolor nobis architecto. Quidem, vero.
 			.col Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ad laboriosam facere et atque harum, veritatis inventore! Explicabo impedit, modi earum eligendi ex suscipit laborum sapiente tempora optio nobis expedita?
-	
-		button Test button
+			.col
+				code Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi porro labore eius tempora reprehenderit totam laborum. Laboriosam debitis ipsum labore temporibus, quibusdam voluptatem laborum, soluta, ab reiciendis est minima?
+	hr
+	button Test button
 include partials/footer.pug

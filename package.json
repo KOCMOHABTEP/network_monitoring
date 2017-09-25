@@ -1,7 +1,7 @@
 {
-  "name": "webtemplate-bootstrap",
+  "name": "frontend-webpack",
   "version": "1.0.1",
-  "description": "Web pack for frontend",
+  "description": "frontend-webpack",
   "repository": {
     "type": "git",
     "url": "https://github.com/KOCMOHABTEP"

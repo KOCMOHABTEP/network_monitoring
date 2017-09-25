@@ -56,7 +56,16 @@ html,body {
 }
 
 button{
-    @include button($color-alt,$padding:rem-calc(20));
+    @include button($color-header,$padding:rem-calc(20));
+    animation: 2s pulse infinite;
+}
+
+.preloader-overlay{
+    @include preloader-overlay($color-bg);
+
+    .preloader-content{
+        @include preloader-content();
+    }
 }
 
 

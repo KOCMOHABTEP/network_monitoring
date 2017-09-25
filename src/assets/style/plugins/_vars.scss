@@ -6,8 +6,8 @@
 $width-container: rem-calc(1200);
 
 // Primary colors
-$color-text: #666c72;
-$color-link: #000;
+$color-text: #111;
+$color-text-gr: #888;
 $color-alt: #18364A;    
 $color-header: #db0f31;
 
@@ -19,13 +19,6 @@ $color-bg-hover: #A70520;
 $font-size-normal: rem-calc(16);
 $font-size-small: rem-calc(14);
 
-// Размеры заголовков
-$font-size-h1: rem-calc(48);
-$font-size-h2: rem-calc(40);
-$font-size-h3: rem-calc(31);
-$font-size-h4: rem-calc(25);
-$font-size-h5: rem-calc(20);
-$font-size-h6: rem-calc(16);
 
 // Шрифты для текста
 $font-family-normal: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;

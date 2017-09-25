@@ -2,8 +2,32 @@
 // Media queries
 //
 
-@media screen and (max-width: 1200px){
+/*------------------------------------------
+  Responsive Grid Media Queries - 1366, 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
 
-    // Styles
+
+@media all and (min-width: 480px) and (max-width: 768px) { }
+
+@media all and (max-width: 480px) { }
+
+
+@mixin respond-to($media) {
+  @if $media == normal {
+    @media all and (max-width: 768px) { @content; }
+  }
+   @else if $media == small {
+    @media all and (max-width: 480px) { @content; }
+   }
+//   @else if $media == wide-screens {
+//     @media only screen and (min-width: $break-large) { @content; }
+//   }
 }
 
+
+//   @include respond-to(normal) { width: 100% ;}
