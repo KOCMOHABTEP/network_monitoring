@@ -2,7 +2,7 @@
 
 if (strlen($_POST['email']) > 5) {
 
-    $to = 'samosval.aod@yandex.ru';
+    $to = '<e-mail direction>';
     $subject = 'Сообщение с сайта [smirnovdm.ru]';
     $headers  = "Content-type: text/html; charset=utf-8 \r\n";
     $headers .= "From: smirnovdm.ru <smirnovdm.ru>\r\n";
