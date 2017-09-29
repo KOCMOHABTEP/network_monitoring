@@ -15,10 +15,13 @@
 - bower install
 - gulp 
 
+## Normalize.css
+Normalize.css — это небольшой CSS-файл, который обеспечивает для HTML-элементов лучшую кроссбраузерность в стилях по умолчанию.
+
 ## rem-calc()
 Функция для перевода пикселей в em.  
 Пример использования:
-```scss
+```
 padding: rem-calc(10);
 margin: rem-calc(10 10 5 5);
 ```
@@ -26,7 +29,7 @@ margin: rem-calc(10 10 5 5);
 ## respond-to()
 Миксин для добавление медиазапросу к классу.  
 Пример использования:
-```scss
+```
 .block{
     ...
     @include respond-to(normal){
@@ -36,5 +39,3 @@ margin: rem-calc(10 10 5 5);
 ```
 
 
-
-## Список миксинов
