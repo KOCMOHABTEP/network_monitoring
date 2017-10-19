@@ -1,12 +1,13 @@
 {
   "name": "frontend-webpack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "frontend-webpack",
   "repository": {
     "type": "git",
     "url": "https://github.com/KOCMOHABTEP"
   },
   "dependencies": {
+    "autoprefixer": "*",
     "babel-preset-env": "*",
     "browser-sync": "*",
     "gulp": "*",
@@ -26,6 +27,7 @@
     "gulp-wait": "*",
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
+    "postcss": "*",
     "rimraf": "*"
   },
   "devDependencies": {

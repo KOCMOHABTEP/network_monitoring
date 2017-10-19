@@ -10,42 +10,32 @@
 // });
 
     // Smooth scroll
-
-    $("body").on('click', '[href*="#"]', function(e){
-        var fixed_offset = 100;
-        $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+    // Плавный скролл
+    $('.js-smooth-scroll').on('click',function(e){
+        $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top }, 1000);
         e.preventDefault();
-      });
+    })    
 
+    // Ajax form
+    // Форма отправки через AJAX
+        function registr(){
+            var form_data = $("#form").serialize(); //собераем все данные из формы
+            $.ajax({
+            type: "POST", //Метод отправки
+            url: "send.php", //путь до php фаила отправителя
+            data: form_data,
+            success: function() {
+                //при успешной отправке - вывести в консоль 'успех'
+                console.log('success')
+            },
+            error: function(){
+                //при неудачной отправке - вывести в консоль 'ошибка'
+                console.log('error')
+            }
+        });
 
-console.log("Hello i am a main.js");
-
-let a =10;
-let b=10;
-
-let count = () => {
-    return a*b;
-}
-
-console.log(count());
-
-function registr(){
-    var form_data = $("#form").serialize(); //собераем все данные из формы
-    $.ajax({
-    type: "POST", //Метод отправки
-    url: "send.php", //путь до php фаила отправителя
-    data: form_data,
-    success: function() {
-           //при успешной отправке - вывести в консоль 'успех'
-           console.log('success')
-    },
-    error: function(){
-        //при неудачной отправке - вывести в консоль 'ошибка'
-        console.log('error')
-    }
-});
-
-};
+        };
+        
 //
 // Ready
 //

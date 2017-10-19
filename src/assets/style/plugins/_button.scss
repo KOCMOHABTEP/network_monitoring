@@ -1,17 +1,20 @@
 //
 // Creating button
 //
-@mixin button($color-bg, $padding: 0) {
+$color-button-bg-hover: rgb(116, 8, 8);
+$color-button-bg: red;
+
+@mixin button($color-button-bg, $padding: 0) {
 
 	@include hover {
 		text-decoration: none;
 		outline: none;
-		background: $color-bg-hover;
+		background: $color-button-bg-hover;
 	}
 	@include focus {
 		text-decoration: none;
 		outline: none;
-		background: $color-bg-hover;
+		background: $color-button-bg-hover;
 	}
 	
 	display: inline-block;
@@ -25,5 +28,5 @@
 	text-decoration: none;
 	border: none;
 	outline: none;
-    background: $color-bg;
+    background: $color-button-bg;
 }

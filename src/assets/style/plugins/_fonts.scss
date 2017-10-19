@@ -1,0 +1,33 @@
+//
+// Подключение шрифтов здесь
+//
+
+// Standart font size
+// Стандартный размер шрифта
+$font-size-normal: rem-calc(16);
+$font-size-small: rem-calc(14);
+
+// Standart font-family
+// Стандартные шрифты
+$font-family-text: Roboto, Helvetica, Arial, sans-serif;
+$font-family-header: AvanteBs,RobotoBold,Helvetica,Arial,sans-serif;
+
+@font-face {
+    font-family: Roboto;
+    src: url('./../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url('./../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: RobotoLight;
+    src: url('./../fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: AvanteBS;
+    src: url('./../fonts/AvanteBs_ExtraBold.ttf') format('truetype');
+}

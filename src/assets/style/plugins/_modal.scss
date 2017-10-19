@@ -2,11 +2,9 @@
 // Modal window
 //
 
-
-
 // Modal overlay background
 
-@mixin modal-overlay($bg) {
+@mixin modal-overlay {
 	
 			position: fixed;
 			z-index: 1000;
@@ -15,28 +13,11 @@
 			display: none;
 			visibility: hidden;
 			opacity: 1;
-			cursor: pointer;
 			width: 100%;
 			height: 100%;
-			background: $bg;
-		
+			background: rgba(0, 0, 0, 0.8);
 			align-items: center;
 			justify-content: center;
-		
-		// width: 100%;
-		// height: 100%;
-		// cursor: pointer;
-		// top: 0;
-		// left: 0;
-		// opacity: 0;
-		// position: fixed;
-		// display: none;
-		// justify-content: center;
-		// align-items: center;
-		// background: rgba(0, 0, 0, 0.8);
-		// z-index: 1000;
-	
-	
 	
 		&.show {
 			display: flex;

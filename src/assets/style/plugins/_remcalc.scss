@@ -28,7 +28,9 @@ $rem-base: 16px !default;
 @function rem-calc($values, $base-value: $rem-base) {
   $max: length($values);
 
-  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+  @if $max == 1 { 
+    @return convert-to-rem(nth($values, 1), $base-value); 
+  }
 
   $remValues: ();
   @for $i from 1 through $max {
@@ -49,4 +51,3 @@ $rem-base: 16px !default;
 //   @return $pxWidth / $rem-base * 1rem;
 // }
 
-// Various global styles

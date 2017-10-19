@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    autoprefixer = require('autoprefixer'),
     babel = require('gulp-babel'),
     pug = require('gulp-pug'),
     eslint = require('gulp-eslint'),
@@ -18,6 +19,7 @@ var gulp = require('gulp'),
     browserSync = require("browser-sync"),
     plumber = require('gulp-plumber'),
     wait = require("gulp-wait"),
+    postcss = require('postcss'),
     reload = browserSync.reload;
 
 var path = {
@@ -123,6 +125,7 @@ gulp.task('style:build',  () => {
             includePaths: ['.src/assets/style/patrials','.src/assets/style/plugins'],
             outputStyle: 'compressed',
         }))
+        //.pipe(postcss([autoprefixer({browsers: ["> 0%"]})]))
         .pipe(prefixer())
         .pipe(cssmin())
         .pipe(gulp.dest(path.build.css))
