@@ -1,0 +1,8 @@
+# Игнорирование bower_components
+bower_components/
+
+# Игнорирование зависимостей
+node_modules/
+
+# Игнорирование полной сборки проекта
+dist/
