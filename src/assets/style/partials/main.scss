@@ -2,11 +2,22 @@
 // Write you code 
 //
 
+$g-background: #212228;
+$bg-dark: #24262d;
+$normal-bg: #282a31;
+$bg-light: #30333c;
+$light-bg: #494c55;
+
+$g-red: #f23030;
+$g-green: #a9fd00;
+$g-black: #000;
+$g-color: #fff;
+$g-text-color: #e6e6e6;
+
+$main-color: #ef406c;
+$alt-color: #75469c;
 
 // Globals
-
-
-
 html,body {
     font-family: $font-family-text;
 	font-size: $font-size-normal;
@@ -15,39 +26,410 @@ html,body {
 	margin: 0;
     padding: 0;
 	letter-spacing: normal;
-    color: $color-text;
-    background: $color-bg;
+    color: $g-color;
+    background: $g-background;
     position: relative;
 }
 
-.container {
-    @include container($width-container);
+h1,h2,h3,h4,h5,h6{
+    margin: 0 0 10px 0;
 }
 
-.row {
-    @include row();
+p{
+    margin: 0 0 10px 0;
+}
 
-    .col {
-        @include col(1, rem-calc(20), rem-calc(20));
+a{
+    color: $g-color;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, button:focus, textarea:focus{
+    outline: none;
+}
+
+.container{
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.link{
+    text-decoration: none;
+    color: $g-color;
+    padding: 5px 10px;
+    border: solid 1px $g-color;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+
+    &:hover{
+        color: $g-black;
+        background: $g-color;
     }
 }
 
-.hide{
-    display: none !important;
+
+
+// Code
+.auth{
+    max-width: 1160px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-row{
+        margin: 10px 0;
+    }
+
+    &__form{
+        max-width: 400px;
+        width: 100%;
+        padding: 30px;
+        margin: 0 auto;
+        border: solid 1px $g-color;
+        border-radius: 5px;
+        background: $normal-bg;
+        
+    }
+
+    &__title{
+        font-family: $font-family-header;
+        margin: 0 0 20px 0;
+    }
+
+    &__input{
+        font-size: 12px;
+        color: $g-text-color;
+        width: 100%;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        border: solid 1px #f5f5f5;
+        border-radius: 5px;
+        background: transparent;
+    }
+
+    &__notification{
+        font-family: 'SegoeUIItalic';
+        font-weight: bold;
+        color: $g-red;
+        height: 18px;
+    }
+
+    &__button{
+        color: $g-text-color;
+        padding: 5px 15px;
+        margin: 0 auto;
+        cursor: pointer;
+        border: solid 1px #e6e6e6;
+        border-radius: 5px;
+        background: transparent;
+        transition: all 0.5s ease;
+        display: block;
+
+        &:hover{
+            color: #000;
+            background: $g-text-color;
+        }
+
+    }
 }
+.error-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-button{
-    @include button($color-header,$padding:rem-calc(20));
-    animation: 2s pulse infinite;
-}
+    &__title{
+        font-size: 150px;
+        color: $g-text-color;
+        display: block;
+        margin: 10px 0;
+    }
 
-.preloader-overlay{
-    @include preloader-overlay($color-bg);
-
-    .preloader-content{
-        @include preloader-content();
+    &__subtitle{
+        font-size: 35px;
+        color: $g-text-color;
+        margin: 10px 0;
+    }
+    &__link{
+        margin: 10px 0;
     }
 }
 
+.header{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: $light-bg;
 
-// Your code here 
+    &__logo{
+        width: 50px;
+    }
+
+    &__title{
+        font-family: 'SegoeUILight';
+        font-weight: 100;
+        margin: 0 10px;
+    }
+
+    .user-profile{
+        height: 50px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &__photo{
+            width: 45px;
+            height: 45px;
+            border: solid 2px $main-color; 
+            border-radius: 50%;
+            overflow: hidden;
+            background: $g-color;
+            position: relative;
+        }
+
+        &__image{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        &__name{
+            margin-left: 10px;
+        }
+    }
+
+    &__item{
+        width: 16px;
+        height: 16px;
+        margin: 0 10px;
+
+        &.notification{
+            background: url('../img/notification.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        .notification__item{
+            font-size: 10px;
+            text-align: center;
+            color: $g-color;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            outline: none;
+            background: $main-color;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
+        
+        &.logout{
+            background: url('../img/logout.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+    }
+}
+
+//Страница с инф. о пользователе
+.user-profile{
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &__form{
+        max-width: 400px;
+        width: 100%;
+        padding: 30px;
+        margin: 0 auto;
+        border: solid 1px $g-color;
+        border-radius: 5px;
+        background: $normal-bg;
+    }
+
+    &__notification{
+        height: 18px;
+
+        &.alert{
+            color: $g-red;
+        }
+
+        &.succes{
+            color: $g-green;
+        }
+    }
+
+    &__row{
+        margin: 10px 0;
+    }
+
+    &__input{
+        font-size: 12px;
+        color: $g-text-color;
+        width: 100%;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        border: solid 1px $g-color;
+        border-radius: 5px;
+        background: transparent;
+    }
+
+    &__textarea{
+        font-size: 12px;
+        color: $g-text-color;
+        width: 100%;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        border: solid 1px $g-color;
+        border-radius: 5px;
+        background: transparent;
+    }
+
+    &__button{
+        color: $g-text-color;
+        padding: 5px 15px;
+        margin: 0 auto;
+        cursor: pointer;
+        border: solid 1px $g-color;
+        border-radius: 5px;
+        background: transparent;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        display: block;
+
+        &:hover{
+            color: $g-black;
+            background: $g-color;
+        }
+    }
+   
+}
+
+//Database 
+.speedtest{
+    margin: 40px 0;
+
+    &__button{
+        color: $g-color;
+        padding: 5px 20px;
+        margin: 0 auto;
+        border: solid 1px $g-color;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.3s ease;
+        
+        &:hover{
+            color: $g-black;
+            background: $g-color;
+        }
+    }
+
+    &__block{
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    &__progress-bar{
+        width: 100%;
+        height: 5px;
+        background: $g-color;
+        position: relative;
+        margin: 15px 0;
+    }
+
+    &__progress-item{
+        height: 5px;
+        position: absolute;
+        background: $main-color;
+        top: 0;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    &__item{
+        width: 25%;
+        height: 150px;
+        margin-right: -4px;
+        position: relative;
+        display: inline-block;
+    }
+
+    &__name{
+        font-size: 18px;
+        color:$g-color;
+    }
+
+    &__metrix-count{
+        font-size: 22px;
+        color: $main-color;
+        height: 25px;
+        margin: 20px 0;
+    }
+
+    &__metrix-value{
+        color: $g-color;
+    }
+
+    &__running{
+        color: $g-black;
+        background: $g-color;
+    }
+
+    &__field{
+        margin-left: 20px;
+        padding: 5px 0;
+        display: inline-block;
+    }
+    
+}
+
+.log-page{
+    margin: 30px 0;
+
+    &__table{
+        padding: 15px;
+        border: solid 1px $g-color;
+        border-radius: 5px;
+        background: $normal-bg;
+    }
+
+    &__row td{
+        border-bottom: solid 1px #333;
+    }
+
+    &__cell{
+        text-align: left;
+        padding: 10px 0;
+        border-right: solid 1px $g-color;
+
+        &:last-child{
+            border-right: none;
+        }
+    }
+
+    &__cell--time{
+        width: 25%;
+        border:none;
+    }
+
+    &__cell--status{
+        width: 25%;
+        border:none;
+    }
+
+    &__cell--description{
+        width: 50%;
+        border:none;
+    }
+}

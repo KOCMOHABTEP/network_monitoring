@@ -28,7 +28,8 @@
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
     "postcss": "*",
-    "rimraf": "*"
+    "rimraf": "*",
+    "speedtest-net": "^1.4.2"
   },
   "devDependencies": {
     "babel-core": "*"

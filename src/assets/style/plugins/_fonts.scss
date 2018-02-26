@@ -9,25 +9,34 @@ $font-size-small: rem-calc(14);
 
 // Standart font-family
 // Стандартные шрифты
-$font-family-text: Roboto, Helvetica, Arial, sans-serif;
-$font-family-header: AvanteBs,RobotoBold,Helvetica,Arial,sans-serif;
+$font-family-text: 'SegoeUI',Tahoma, Geneva, Verdana, sans-serif;
+$font-family-header: 'SegoeUIBold',Tahoma, Geneva, Verdana, sans-serif;
 
 @font-face {
-    font-family: Roboto;
-    src: url('./../fonts/Roboto-Regular.ttf') format('truetype');
+    font-family: 'SegoeUI';
+    src: url('./../fonts/SegoeUI/segoeui.ttf') format('truetype');
 }
-
 @font-face {
-    font-family: RobotoBold;
-    src: url('./../fonts/Roboto-Bold.ttf') format('truetype');
+    font-family: 'SegoeUIBold';
+    src: url('./../fonts/SegoeUIBold/segoeuib.ttf') format('truetype');
 }
-
 @font-face {
-    font-family: RobotoLight;
-    src: url('./../fonts/Roboto-Light.ttf') format('truetype');
+    font-family: 'SegoeUIBlack';
+    src: url('./../fonts/SegoeUIBlack/seguibl.ttf') format('truetype');
 }
-
 @font-face {
-    font-family: AvanteBS;
-    src: url('./../fonts/AvanteBs_ExtraBold.ttf') format('truetype');
+    font-family: 'SegoeUIItalic';
+    src: url('./../fonts/SegoeUIItalic/segoeuii.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SegoeUILight';
+    src: url('./../fonts/SegoeUILight/segoeuil.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SegoeUISemiBold';
+    src: url('./../fonts/SegoeUISemiBold/seguisb.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SegoeUISemiLight';
+    src: url('./../fonts/SegoeUISemiLight/segoeuisl.ttf') format('truetype');
 }

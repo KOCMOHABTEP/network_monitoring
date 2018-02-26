@@ -26,10 +26,10 @@ var path = {
     build: {
         pug: 'dist/',
         html: 'dist/',
-        js: 'dist/assets/js/',
-        css: 'dist/assets/css/',
-        img: 'dist/assets/img/',
-        fonts: 'dist/assets/fonts/'
+        js: 'dist/js/',
+        css: 'dist/css/',
+        img: 'dist/img/',
+        fonts: 'dist/fonts/'
     },
     src: {
         pug: 'src/pages/*.pug',
@@ -37,7 +37,7 @@ var path = {
         js: 'src/assets/js/*.js',
         style: 'src/assets/style/*.scss',
         img: 'src/assets/img/**/*.*',
-        fonts: 'src/assets/fonts/*.*'
+        fonts: 'src/assets/fonts/**/*.*'
 
     },
     watch: {
@@ -46,7 +46,7 @@ var path = {
         js: ['src/assets/js/*.js','src/assets/js/**/*.js'],
         style: ['src/assets/style/*.scss','src/assets/style/**/*.scss'],
         img: 'src/assets/img/**/*.*',
-        fonts: 'src/assets/fonts/*.*',
+        fonts: 'src/assets/fonts/**/*.*',
         jslint: ['src/assets/js/*.js','src/assets/js/**/*.js'],
         puglint: ['src/pages/*.pug','src/pages/partials/*.pug']
     },
@@ -110,7 +110,6 @@ gulp.task('js:build',  () => {
         .pipe(babel({
             presets: ['env']
         }))
-        .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({
             stream: true
@@ -127,7 +126,6 @@ gulp.task('style:build',  () => {
         }))
         //.pipe(postcss([autoprefixer({browsers: ["> 0%"]})]))
         .pipe(prefixer())
-        .pipe(cssmin())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({
             stream: true

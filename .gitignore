@@ -5,4 +5,4 @@ bower_components/
 node_modules/
 
 # Игнорирование полной сборки проекта
-dist/
+# dist/

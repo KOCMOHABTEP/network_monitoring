@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>SMDM Webpage</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="../css/app.css"/>
+  </head>
+</html>
+<body>
+  <header class="header"><a class="header__link" href="/"><img class="header__logo" src="../img/logo.png" alt="logo"/></a>
+    <h4 class="header__title">СИСТЕМА НИПЕЛЬ</h4>
+    <div class="user-profile"><a class="user-profile__photo" href="#"><img class="user-profile__image" src="../img/user.jpg" alt="user photo"/></a><a class="user-profile__name" href="#">Administrator</a><a class="header__item notification" href="#" alt="Уведомление"><span class="notification__item">3</span></a><a class="header__item logout" href="#" alt="Выйти из системы"></a></div>
+  </header>
+  <main class="container">
+    <section class="speedtest">
+      <div class="speedtest__button" id="startStopBtn">Проверка</div>
+      <div class="speedtest__field">IP адрес: <span id="ip" class="speedtest__ip-adress"></span></div>
+      <div class="speedtest__block" id="test">
+        <div class="speedtest__progress-bar" id="progressBar">
+          <div class="speedtest__progress-item" id="progress"></div>
+        </div>
+        <div class="testArea speedtest__item">
+          <div class="testName speedtest__name">Скачать</div>
+          <div class="meterText speedtest__metrix-count" id="dlText">0.00</div>
+          <div class="unit speedtest__metrix-value">Mbps</div>
+        </div>
+        <div class="testArea speedtest__item">
+          <div class="testName speedtest__name">Загрузить</div>
+          <div class="meterText speedtest__metrix-count" id="ulText">0.00</div>
+          <div class="unit speedtest__metrix-value">Mbps</div>
+        </div>
+        <div class="testArea speedtest__item">
+          <div class="testName speedtest__name">Пинг</div>
+          <div class="meterText speedtest__metrix-count" id="pingText">0.00</div>
+          <div class="unit speedtest__metrix-value">ms</div>
+        </div>
+        <div class="testArea speedtest__item">
+          <div class="testName speedtest__name">Jitter</div>
+          <div class="meterText speedtest__metrix-count" id="jitText">0.00</div>
+          <div class="unit speedtest__metrix-value">ms</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+<script src="../js/app.js"></script>
+<script src="./speedtest.js"></script>
