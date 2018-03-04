@@ -2437,9 +2437,5 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 // Write your code here
 //
 
-//
-// Ready
-//
-
 
 console.info('Scripts loaded');

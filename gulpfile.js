@@ -122,7 +122,7 @@ gulp.task('style:build',  () => {
         .pipe(wait(500))
         .pipe(sass({
             includePaths: ['.src/assets/style/patrials','.src/assets/style/plugins'],
-            outputStyle: 'compressed',
+            outputStyle: 'expanded',
         }))
         //.pipe(postcss([autoprefixer({browsers: ["> 0%"]})]))
         .pipe(prefixer())

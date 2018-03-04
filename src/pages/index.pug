@@ -1,4 +1,59 @@
 include partials/header.pug
 body
-	
+    section.constructor#constructor
+        //- .top-panel        
+        .left-panel
+            .left-panel__menu
+                a(href="#" title="Главная").left-panel__item.active
+                    span.left-panel__image.image-home
+                a(href="#" title="Помещение").left-panel__item
+                    span.left-panel__image.image-room
+                a(href="#" title="Настройки").left-panel__item
+                    span.left-panel__image.image-settings
+                a(href="#" title="Помощь").left-panel__item.js-help
+                    span.left-panel__image.image-help
+        .right-panel
+            .right-panel__menu
+                a(href="#" title="Отобразить в линиях").right-panel__item
+                    span.right-panel__image.image-lines
+                a(href="#" title="Сохранить").right-panel__item
+                    span.right-panel__image.image-save
+                a(href="#" title="Поделиться").right-panel__item
+                    span.right-panel__image.image-share
+                a(href="#" title="Сохранить чертеж").right-panel__item
+                    span.right-panel__image.image-blueprint
+        .modal-overlay
+            .modal.modal-help
+                .modal__header Помощь
+                    span.modal__close.js-modal-close ✖
+                .modal__body
+                    .modal__title Панель управления
+                    ul.modal__list 
+                        li.modal__item 
+                            span.modal__box.image-lines
+                            p.modal__text вкл./выкл. режим проектирования, этот режим удобен для планирования, так как в нем присутствует размерная сетка
+                        li.modal__item 
+                            span.modal__box.image-save
+                            p.modal__text сохранить проект
+                        li.modal__item 
+                            span.modal__box.image-share
+                            p.modal__text поделиться проектом
+                        li.modal__item 
+                            span.modal__box.image-blueprint
+                            p.modal__text создать чертеж
+                    .modal__title Управление камерой
+                    ul.modal__list 
+                        li.modal__item 
+                            span.modal__hotkey ЛКМ
+                            | +
+                            span.modal__hotkey Перемещение мышки
+                            | вращение камеры
+                        li.modal__item 
+                            span.modal__hotkey ПКМ
+                            | +
+                            span.modal__hotkey Перемещение мышки
+                            | перемещение камеры
+                        li.modal__item 
+                            span.modal__hotkey КОЛЕСО МЫШИ
+                            | приблизить, отдалить камеру
 include partials/footer.pug

@@ -433,3 +433,259 @@ input:focus, button:focus, textarea:focus{
         border:none;
     }
 }
+
+//Constructor page
+.constructor{
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    min-height: 100vh;
+
+    .left-panel{
+        max-width: 50px;
+        width: 100%;
+        height: 100vh;
+        background: $light-bg;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        &__menu{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__item{
+            width: 50px;
+            height: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.active{
+                background: $bg-light;
+            }
+        }
+
+        &__image{
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            
+
+            &.image-home{
+                background: url('../img/constructor/home.png') no-repeat center center;
+                background-size: cover;
+            }
+            &.image-room{
+                background: url('../img/constructor/drawing.png') no-repeat center center;
+                background-size: cover;
+            }
+            &.image-settings{
+                background: url('../img/constructor/settings.png') no-repeat center center;
+                background-size: cover;
+            }
+            &.image-help{
+                background: url('../img/constructor/help.png') no-repeat center center;
+                background-size: cover;
+            }
+        }
+    }
+    .right-panel{
+        max-width: 50px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        align-items: center;
+
+        &__menu{
+            display: flex;
+            flex-direction: column;
+            background: $light-bg;
+            position: relative;
+
+            &:before{
+                content: '';
+                border-bottom: 20px solid $light-bg;
+                border-left: 50px solid transparent;
+                position: absolute;
+                top: -20px;
+            }
+            &:after{
+                content: '';
+                border-top: 20px solid $light-bg;
+                border-right: 50px solid transparent;
+                position: absolute;
+                bottom: -20px;
+            }
+        }
+
+        &__item{
+            width: 50px;
+            height: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.active{
+                background: $bg-light;
+            }
+        }
+
+        &__image{
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            
+            &.image-lines{
+                background: url('../img/constructor/cube.png') no-repeat center center;
+                background-size: cover;
+            }
+            &.image-save{
+                background: url('../img/constructor/diskette.png') no-repeat center center;
+                background-size: cover;
+            }
+            &.image-share{
+                background: url('../img/constructor/share-symbol.png') no-repeat center center;
+                background-size: cover;
+            }
+            &.image-blueprint{
+                background: url('../img/constructor/blueprint.png') no-repeat center center;
+                background-size: cover;
+            }
+        }
+    }
+    .modal-overlay{
+        width: 100%;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+
+        &.active{
+            display: flex;
+        }
+
+        .modal{
+            max-width: 640px;
+            min-height: 100px;
+            width: 100%;
+            background: $light-bg;
+
+            &__header{
+                font-size: 24px;
+                line-height: 50px;
+                padding: 0 30px;
+                text-transform: uppercase;
+                background: $g-background;
+                position: relative;
+            }
+            &__body{
+                padding: 30px;
+            }
+            &__list{
+                list-style: none;
+            }
+            &__item{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            &__box{
+                height: 32px;
+                width: 32px;
+                border: solid 1px $g-color;
+                border-radius: 3px;
+                display: inline-block;
+                position: relative;
+                
+                &.image-lines:after{
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    background: url('../img/constructor/cube.png') no-repeat center center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                }
+                &.image-save:after{
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    background: url('../img/constructor/diskette.png') no-repeat center center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                }
+                &.image-share:after{
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    background: url('../img/constructor/share-symbol.png') no-repeat center center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                }
+                &.image-blueprint:after{
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    background: url('../img/constructor/blueprint.png') no-repeat center center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                }
+            }
+            &__text{
+                margin-left: 15px;
+                margin-bottom: 0;
+                flex: 1;
+                display: inline-block;
+            }
+            &__hotkey{
+                text-transform: uppercase;
+                padding: 2px 5px;
+                margin: 0 5px;
+                border: solid 1px $g-color;
+                border-radius: 3px;
+                box-shadow: 1px 1px 7px rgba(255,255,255,0.3);
+            }
+            &__close{
+                font-size: 12px;
+                cursor: pointer;
+                position: absolute;
+                right: 30px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+}
