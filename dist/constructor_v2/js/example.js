@@ -203,9 +203,9 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
   var ACTIVE_CLASS = "active";
 
   var tabs = {
-    "FLOORPLAN" : $("#floorplan_tab"),
-    "SHOP" : $("#items_tab"),
-    "DESIGN" : $("#design_tab")
+    "FLOORPLAN" : $('[item="planner"]'),
+    "SHOP" : $('[item="catalog"]'),
+    "DESIGN" : $('[item="viewer"]')
   }
 
   var scope = this;

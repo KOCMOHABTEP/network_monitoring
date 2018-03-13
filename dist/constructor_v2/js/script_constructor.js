@@ -12,9 +12,7 @@ $(document).ready(function () {
     var leftPanelItem = $('.left-panel__item');
     leftPanelItem.on('click', function (event) {
         if (!$(this).hasClass('active')) {
-            leftPanelItem.each(function () {
-                $(this).removeClass('active');
-            });
+            $(this).siblings().removeClass('active');
             $(this).addClass('active');
         } else {
             event.preventDefault();
@@ -42,4 +40,5 @@ $(document).ready(function () {
             overlay.addClass('active');
         }
     });
+
 });

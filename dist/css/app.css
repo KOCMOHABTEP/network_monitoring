@@ -869,6 +869,7 @@ input:focus, button:focus, textarea:focus {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 1000;
 }
 
 .constructor .left-panel__menu {
@@ -918,6 +919,11 @@ input:focus, button:focus, textarea:focus {
   background-size: cover;
 }
 
+.constructor .left-panel__image.image-catalog {
+  background: url("../img/constructor/bedside-table.png") no-repeat center center;
+  background-size: cover;
+}
+
 .constructor .left-panel__image.image-settings {
   background: url("../img/constructor/settings.png") no-repeat center center;
   background-size: cover;
@@ -939,6 +945,7 @@ input:focus, button:focus, textarea:focus {
   right: 0;
   top: 0;
   bottom: 0;
+  z-index: 1000;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1030,6 +1037,7 @@ input:focus, button:focus, textarea:focus {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  z-index: 1000;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -1165,4 +1173,84 @@ input:focus, button:focus, textarea:focus {
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+#floorplanner {
+  background: #fff;
+}
+
+#viewer {
+  position: relative;
+}
+
+.camera-controls {
+  font-size: 0;
+  padding: 0 20px;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+
+.camera-controls__button {
+  font-size: 16px;
+  width: 25px;
+  height: 25px;
+  margin: 0 2px;
+  cursor: pointer;
+  background: #494c55;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  z-index: 1100;
+}
+
+.camera-controls__button:hover {
+  background: #30333c;
+}
+
+.camera-controls__img {
+  margin: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.camera-controls__img.control-zoom-out {
+  background-image: url("../img/constructor/zoom-out.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.camera-controls__img.control-reset {
+  background-image: url("../img/constructor/full-screen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.camera-controls__img.control-zoom-in {
+  background-image: url("../img/constructor/zoom-in.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.camera-controls__img.control-left {
+  margin: 5px;
+  background-image: url("../img/constructor/left-arrow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.camera-controls__img.control-right {
+  margin: 5px;
+  background-image: url("../img/constructor/right-arrow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
