@@ -38,6 +38,30 @@
                 </a>
             </div>
         </div>
+        <div id="context-menu" class="context-menu">
+            <div class="context-menu__header">Меню управления</div>
+            <div class="context-menu__body">
+                <div id="context-menu-name" class="context-menu__title"></div>
+                <button class="context-menu__button" id="context-menu-delete">Удалить предмет</button>
+                <div class="context-menu__title">Задайте размер:</div>
+                <div class="context-menu__field">
+                    <label class="context-menu__subtitle">Ширина</label>
+                    <input type="number" class="context-menu__input" id="item-width">
+                </div>
+                <div class="context-menu__field">
+                    <label class="context-menu__subtitle">Глубина</label>
+                    <input type="number" class="context-menu__input" id="item-depth">
+                </div>
+                <div class="context-menu__field">
+                    <label class="context-menu__subtitle">Высота</label>
+                    <input type="number" class="context-menu__input" id="item-height">
+                </div>
+                <label class="context-menu__label">
+                    <input type="checkbox" id="fixed">
+                    <span>Зафиксировать объект</span>
+                </label>
+            </div>
+              </div>
         <div class="right-panel">
             <div class="right-panel__menu">
                 <a class="right-panel__item" href="#" title="Отобразить в линиях">
@@ -108,15 +132,128 @@
                 <a href="#" class="camera-controls__button" id="move-left">
                     <span class="camera-controls__img control-left"></span>
                 </a>
+                <div class="camera-controls__vertical">
+                    <a href="#" class="camera-controls__button" id="move-up">
+                        <span class="camera-controls__img control-up"></span>
+                    </a>
+                    <a href="#" class="camera-controls__button" id="move-down">
+                        <span class="camera-controls__img control-down"></span>
+                    </a>
+                </div>
                 <a href="#" class="camera-controls__button" id="move-right">
                     <span class="camera-controls__img control-right"></span>
                 </a>
             </div>
         </div>
+        <!-- Планировщик помещений -->
         <div id="floorplanner">
             <canvas id="floorplanner-canvas"></canvas>
         </div>
-        <div id="add-items"></div>
+        <!-- ... -->
+        <!-- Добавление предметов в кабинет -->
+        <div id="add-items" class="adding-items">
+            <div class="adding-items__container">
+                <!-- Предметы -->
+                <a class="adding-items__thumbnail add-item" model-name="Open Door" model-url="models/js/open_door.js" model-type="7">
+                    <img src="models/thumbnails/thumbnail_Screen_Shot_2014-10-27_at_8.22.46_PM.png" alt="Add Item"> 
+                    <span class="adding-items__description">Открытая дверь</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Closed Door" model-url="models/js/closed-door28x80_baked.js" model-type="7">
+                    <img src="models/thumbnails/thumbnail_Screen_Shot_2014-10-27_at_8.04.12_PM.png" alt="Add Item">
+                    <span class="adding-items__description">Закрытая дверь</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Window" model-url="models/js/whitewindow.js" model-type="3">
+                    <img src="models/thumbnails/thumbnail_window.png" alt="Add Item">
+                    <span class="adding-items__description">Окно</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Chair" model-url="models/js/gus-churchchair-whiteoak.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_Church-Chair-oak-white_1024x1024.jpg" alt="Add Item">
+                    <span class="adding-items__description">Стул</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Red Chair" model-url="models/js/ik-ekero-orange_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_tn-orange.png" alt="Add Item">
+                    <span class="adding-items__description">Красный стул</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Blue Chair" model-url="models/js/ik-ekero-blue_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_ekero-blue3.png" alt="Add Item">
+                    <span class="adding-items__description">Синий стул</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Dresser - Dark Wood" model-url="models/js/DWR_MATERA_DRESSER2.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_matera_dresser_5.png" alt="Add Item">
+                    <span class="adding-items__description">Комод - темное дерево</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Dresser - White" model-url="models/js/we-narrow6white_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_img25o.jpg" alt="Add Item">
+                    <span class="adding-items__description">Комод - белый</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Bedside table - Shale" model-url="models/js/bd-shalebedside-smoke_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_Blu-Dot-Shale-Bedside-Table.jpg" alt="Add Item">
+                    <span class="adding-items__description">Прикроватная тумба - светлая</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Bedside table - White" model-url="models/js/cb-archnight-white_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_arch-white-oval-nightstand.jpg" alt="Add Item">
+                    <span class="adding-items__description">Прикроватная тумба - белая</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Wardrobe - White" model-url="models/js/ik-kivine_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_TN-ikea-kvikine.png" alt="Add Item">
+                    <span class="adding-items__description">Гардероб - белый</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Full Bed" model-url="models/js/ik_nordli_full.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_nordli-bed-frame__0159270_PE315708_S4.JPG" alt="Add Item">
+                    <span class="adding-items__description">Двуспальная кровать</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Bookshelf" model-url="models/js/cb-kendallbookcasewalnut_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_kendall-walnut-bookcase.jpg" alt="Add Item">
+                    <span class="adding-items__description">Книжный шкаф</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Media Console - White" model-url="models/js/cb-clapboard_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_clapboard-white-60-media-console-1.jpg" alt="Add Item"> 
+                    <span class="adding-items__description">Мультимедийная тумба с телевизором - белая</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Media Console - Black" model-url="models/js/cb-moore_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_moore-60-media-console-1.jpg" alt="Add Item">
+                    <span class="adding-items__description">Мультимедийная тумба с телевизором - черная</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Sectional - Olive" model-url="models/js/we-crosby2piece-greenbaked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_img21o.jpg" alt="Add Item">
+                    <span class="adding-items__description">Угловой диван - оливковый</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Sofa - Grey" model-url="models/js/cb-rochelle-gray_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_rochelle-sofa-3.jpg" alt="Add Item">
+                    <span class="adding-items__description">Диван - серый</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Wooden Trunk" model-url="models/js/cb-tecs_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_teca-storage-trunk.jpg" alt="Add Item">
+                    <span class="adding-items__description">Деревянная столешница</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Floor Lamp" model-url="models/js/ore-3legged-white_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_ore-white.png" alt="Add Item">
+                    <span class="adding-items__description">Лампа</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Coffee Table - Wood" model-url="models/js/ik-stockholmcoffee-brown.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_stockholm-coffee-table__0181245_PE332924_S4.JPG" alt="Add Item">
+                    <span class="adding-items__description">Кофейный столик - дерево</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Side Table" model-url="models/js/GUSossingtonendtable.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_Screen_Shot_2014-02-21_at_1.24.58_PM.png" alt="Add Item">
+                    <span class="adding-items__description">Столик</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Dining Table" model-url="models/js/cb-scholartable_baked.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_scholar-dining-table.jpg" alt="Add Item">
+                    <span class="adding-items__description">Обеденный стол - круглый</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Dining table" model-url="models/js/BlakeAvenuejoshuatreecheftable.js" model-type="1">
+                    <img src="models/thumbnails/thumbnail_Screen_Shot_2014-01-28_at_6.49.33_PM.png" alt="Add Item">
+                    <span class="adding-items__description">Обеденный стол - квадратный</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Blue Rug" model-url="models/js/cb-blue-block-60x96.js" model-type="8">
+                    <img src="models/thumbnails/thumbnail_cb-blue-block60x96.png" alt="Add Item">
+                    <span class="adding-items__description">Синий ковер</span>
+                </a>
+                <!-- ...Предметы -->
+            </div>
+        </div>
+        <!-- ... -->
     </section>
 </body>
 <script src="./js/jquery-3.3.1.js"></script>

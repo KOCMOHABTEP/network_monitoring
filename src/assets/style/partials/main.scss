@@ -699,6 +699,7 @@ input:focus, button:focus, textarea:focus{
 
 // Constructor controls
 #floorplanner{
+    min-height: 100vh;
     background: $g-color;
 }
 
@@ -727,6 +728,17 @@ input:focus, button:focus, textarea:focus{
         
         &:hover{
             background: $bg-light;
+        }
+
+        &#move-up{
+            position: absolute;
+            top: -15px;
+            margin: 0;
+        }
+        &#move-down{
+            position: absolute;
+            bottom: -15px;
+            margin: 0;
         }
     }
 
@@ -769,6 +781,125 @@ input:focus, button:focus, textarea:focus{
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+        }
+        &.control-up{
+            margin: 5px;
+            background-image: url('../img/constructor/up-arrow.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.control-down{
+            margin: 5px;
+            background-image: url('../img/constructor/down-arrow.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__vertical{
+        display: inline-block;
+        position: relative;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.adding-items{
+    margin-left: 50px;
+    overflow: auto;
+
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__thumbnail{
+        color: $g-black;
+        padding: 10px;
+        margin: 15px;
+        cursor: pointer;
+        border: solid 1px $g-color;
+        border-radius: 5px;
+        flex: 0 0 200px;
+        transition: all 0.3s ease;
+        background: $g-color;
+
+        &:hover{
+            transform: scale(1.05);
+        }
+
+    }
+    &__description{
+        display: block;
+    }
+}
+
+.context-menu{
+    max-width: 350px;
+    width: 100%;
+    border-left: solid 1px $bg-light;
+    background: $light-bg;
+    position: absolute;
+    left: 50px;
+    z-index: 1000;
+
+    &__header{
+        font-size: 24px;
+        line-height: 50px;
+        padding: 0 30px;
+        text-transform: uppercase;
+        background: $g-background;
+        position: relative;
+    }
+
+    &__body{
+        padding: 15px 30px;
+    }
+
+    &__title{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    &__button{
+        color: $g-color;
+        padding: 5px 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background: $g-red;
+        transition: all 0.5s ease;
+        display: inline-block;
+
+        &:hover{
+            color: $g-black;
+            background: $g-color;
+        }
+    }
+    &__field{
+        margin-bottom: 10px;
+    }
+    &__subtitle{
+        margin-bottom: 10px;
+        display: block;
+    }
+    &__input{
+        font-size: 12px;
+        color: $g-color;
+        width: 100%;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        border: solid 1px $g-color;
+        border-radius: 5px;
+        background: transparent;
+    }
+    &__label{
+        display: block;
+
+        span{
+            line-height: 1;
+            vertical-align: top;
         }
     }
 }

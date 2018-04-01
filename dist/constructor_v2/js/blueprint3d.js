@@ -339,7 +339,7 @@ var BP3D;
                         return "" + Math.round(10 * cm) / 10 + " cm";
                     case Core.dimMeter:
                     default:
-                        return "" + Math.round(10 * cm) / 1000 + " m";
+                        return "" + (Math.round(10 * cm) / 1000).toFixed(2) + " m";
                 }
             };
             return Dimensioning;
@@ -389,7 +389,7 @@ var BP3D;
             };
             /** Configuration data loaded from/stored to extern. */
             Configuration.data = {
-                dimUnit: Core.dimInch,
+                dimUnit: Core.dimMeter,
                 wallHeight: 250,
                 wallThickness: 10
             };

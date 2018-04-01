@@ -324,7 +324,7 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
 
   // TODO: this doesn't really belong here
   function initItems() {
-    $("#add-items").find(".add-item").mousedown(function(e) {
+    $("#add-items").find(".add-item").on('click',function(e) {
       var modelUrl = $(this).attr("model-url");
       var itemType = parseInt($(this).attr("model-type"));
       var metadata = {
