@@ -45,16 +45,24 @@
                 <button class="context-menu__button" id="context-menu-delete">Удалить предмет</button>
                 <div class="context-menu__title">Задайте размер:</div>
                 <div class="context-menu__field">
-                    <label class="context-menu__subtitle">Ширина</label>
+                    <label class="context-menu__subtitle">Ширина (см)</label>
                     <input type="number" class="context-menu__input" id="item-width">
                 </div>
                 <div class="context-menu__field">
-                    <label class="context-menu__subtitle">Глубина</label>
+                    <label class="context-menu__subtitle">Глубина (см)</label>
                     <input type="number" class="context-menu__input" id="item-depth">
                 </div>
                 <div class="context-menu__field">
-                    <label class="context-menu__subtitle">Высота</label>
+                    <label class="context-menu__subtitle">Высота (см)</label>
                     <input type="number" class="context-menu__input" id="item-height">
+                </div>
+                <div class="context-menu__field">
+                    <label class="context-menu__subtitle">Смещение по оси Х (см)</label>
+                    <input type="number" class="context-menu__input" id="item-x">
+                </div>
+                <div class="context-menu__field">
+                    <label class="context-menu__subtitle">Смещение по оси Y (см)</label>
+                    <input type="number" class="context-menu__input" id="item-y">
                 </div>
                 <label class="context-menu__label">
                     <input type="checkbox" id="fixed">
@@ -144,10 +152,23 @@
                     <span class="camera-controls__img control-right"></span>
                 </a>
             </div>
+            <div id="main-controls" class="main-controls">
+                <a href="#" class="main-controls__button" id="new">Новый план</a>
+                <a href="#" class="main-controls__button" id="saveFile">Сохранить план</a>
+                <a href="#" class="main-controls__button">Загрузить план
+                    <input type="file" id="loadFile" class="main-controls__input"> 
+                </a>
+            </div>
         </div>
         <!-- Планировщик помещений -->
         <div id="floorplanner">
             <canvas id="floorplanner-canvas"></canvas>
+            <div class="floorplanner-controls">
+                <button id="move" class="floorplanner__button floorplanner__button--move">Перемещение стены</button>
+                <button id="draw" class="floorplanner__button floorplanner__button--draw">Нарисовать стены</button>
+                <button id="delete" class="floorplanner__button floorplanner__button--delete">Удалить стену</button>
+                <div id="draw-walls-hint" class="floorplanner__hint">Нажмите "ESC" чтобы выйти из режима отрисовки стен</div>
+            </div>
         </div>
         <!-- ... -->
         <!-- Добавление предметов в кабинет -->
@@ -250,6 +271,25 @@
                     <img src="models/thumbnails/thumbnail_cb-blue-block60x96.png" alt="Add Item">
                     <span class="adding-items__description">Синий ковер</span>
                 </a>
+                <a class="adding-items__thumbnail add-item" model-name="Школьная парта" model-url="models/js/my/parta.json" model-type="1">
+                    <img src="models/thumbnails/my/parta.jpg" alt="Add Item">
+                    <span class="adding-items__description">Школьная парта</span>
+                <a class="adding-items__thumbnail add-item" model-name="Школьный стул" model-url="models/js/my/chair.json" model-type="1">
+                    <img src="models/thumbnails/my/chair.jpg" alt="Add Item">
+                    <span class="adding-items__description">Школьный стул</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Доска" model-url="models/js/my/doska.json" model-type="2">
+                    <img src="models/thumbnails/my/doska.png" alt="Add Item">
+                    <span class="adding-items__description">Доска</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Компьютер" model-url="models/js/my/comp.json" model-type="1">
+                    <img src="models/thumbnails/my/PC.jpg" alt="Add Item">
+                    <span class="adding-items__description">Компьютер</span>
+                </a>
+                <a class="adding-items__thumbnail add-item" model-name="Роутер TP-Link" model-url="models/js/my/router.json" model-type="1">
+                    <img src="models/thumbnails/my/router.jpg" alt="Add Item">
+                    <span class="adding-items__description">Роутер TP-Link</span>
+                </a>
                 <!-- ...Предметы -->
             </div>
         </div>
@@ -259,7 +299,6 @@
 <script src="./js/jquery-3.3.1.js"></script>
 <script src="./js/three.min.js"></script>
 <script src="./js/blueprint3d.js"></script>
-<!-- <script src="./js/jquery.js"></script> -->
 <script src="./js/items.js"></script>
 <script src="./js/example.js"></script>
 

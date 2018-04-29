@@ -2024,7 +2024,7 @@ var BP3D;
             ;
             /** Take action after a resize */
             FloorItem.prototype.resized = function () {
-                this.position.y = this.halfSize.y;
+                //this.position.y = this.halfSize.y;
             };
             /** */
             FloorItem.prototype.moveToPosition = function (vec3, intersection) {
@@ -3585,7 +3585,7 @@ var BP3D;
             var planes = [];
             var basePlanes = []; // always visible
             var texture = null;
-            var lightMap = THREE.ImageUtils.loadTexture("rooms/textures/walllightmap.png");
+            //var lightMap = THREE.ImageUtils.loadTexture("rooms/textures/walllightmap.png");
             var fillerColor = 0xdddddd;
             var sideColor = 0xcccccc;
             var baseColor = 0xdddddd;
@@ -3679,7 +3679,8 @@ var BP3D;
             }
             function updatePlanes() {
                 var wallMaterial = new THREE.MeshBasicMaterial({
-                    color: 0xffffff,
+                    // Цвет стен
+                    color: 0xeefcff,
                     // ambientColor: 0xffffff, TODO_Ekki
                     //ambient: scope.wall.color,
                     side: THREE.FrontSide,
@@ -4520,7 +4521,7 @@ var BP3D;
                 object.rotation.y = item.rotation.y;
                 object.position.x = item.position.x;
                 object.position.z = item.position.z;
-                object.position.y = height;
+                object.position.y = item.position.y;
                 return object;
             }
             init();

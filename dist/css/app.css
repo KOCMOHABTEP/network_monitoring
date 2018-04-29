@@ -941,6 +941,7 @@ input:focus, button:focus, textarea:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none !important;
   position: absolute;
   right: 0;
   top: 0;
@@ -1178,6 +1179,67 @@ input:focus, button:focus, textarea:focus {
 #floorplanner {
   min-height: 100vh;
   background: #fff;
+  position: relative;
+}
+
+.floorplanner-controls {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.floorplanner__button {
+  font-size: 12px;
+  color: #fff;
+  padding: 5px 10px 5px 20px;
+  display: inline-block;
+  cursor: pointer;
+  border: solid 1px #30333c;
+  border-radius: 5px;
+  background: #30333c;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.floorplanner__button::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-radius: 50%;
+  border: solid 1px #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3px;
+  margin: auto;
+}
+
+.floorplanner__button:hover {
+  color: #30333c;
+  background: #fff;
+}
+
+.floorplanner__button:hover:after {
+  border: solid 1px #30333c;
+}
+
+.floorplanner__button.btn-primary {
+  color: #30333c;
+  background: #fff;
+}
+
+.floorplanner__button.btn-primary:after {
+  background: #30333c;
+}
+
+.floorplanner__hint {
+  padding: 5px;
+  background: #30333c;
+  position: absolute;
+  top: 40px;
+  right: 0;
 }
 
 #viewer {
@@ -1289,6 +1351,43 @@ input:focus, button:focus, textarea:focus {
   position: relative;
   width: 25px;
   height: 25px;
+}
+
+.main-controls {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.main-controls__button {
+  font-size: 12px;
+  color: #fff;
+  padding: 5px 15px;
+  margin: 0 5px;
+  border: solid 1px #30333c;
+  background: #30333c;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.main-controls__button:hover {
+  color: #30333c;
+  background: #fff;
+}
+
+.main-controls__input {
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .adding-items {
