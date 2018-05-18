@@ -10,6 +10,8 @@
     "autoprefixer": "*",
     "babel-preset-env": "*",
     "browser-sync": "*",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-babel": "*",
@@ -27,9 +29,14 @@
     "gulp-wait": "*",
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
+    "libnmap": "^0.4.11",
+    "network": "^0.4.1",
+    "node-nmap": "^4.0.0",
     "postcss": "*",
     "rimraf": "*",
-    "speedtest-net": "^1.4.2"
+    "speedtest-net": "^1.4.2",
+    "systeminformation": "^3.38.0",
+    "tcp-ping": "^0.1.1"
   },
   "devDependencies": {
     "babel-core": "*"

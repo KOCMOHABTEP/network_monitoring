@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>SMDM Webpage</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/app.css"/>
+  </head>
+</html>
+<body>
+  <header class="dashboard-header">
+    <div class="dashboard-logo"><img class="dashboard-logo__image" src="./img/logo.png"/><span class="dashboard-logo__name">LabConstruct</span></div><a class="dashboard-user" href="#">
+      <div class="dashboard-user__image"><img class="dashboard-user__photo" src="./img/user.jpg"/></div>
+      <div class="dashboard-user__name">Дмитрий Смирнов</div></a>
+  </header>
+  <div class="dashboard-inner">
+    <div class="dashboard-sidebar">
+      <ul class="dashboard-sidebar__menu-list">
+        <li class="dashboard-sidebar__menu-item active"><a class="dashboard-sidebar__menu-link icon-dashboard" href="#">Dashboard</a></li>
+        <li class="dashboard-sidebar__menu-item"> <a class="dashboard-sidebar__menu-link icon-constructor" href="#">Конструктор</a></li>
+        <li class="dashboard-sidebar__menu-item"> <a class="dashboard-sidebar__menu-link icon-monitoring" href="#">Мониторинг</a></li>
+        <li class="dashboard-sidebar__menu-item"> <a class="dashboard-sidebar__menu-link icon-notification" href="#">Уведомления</a></li>
+      </ul>
+    </div>
+    <div class="dashboard-content">
+      <div class="dashboard-content__message">
+        <h1 class="dashboard-content__title">Мониторинг</h1><span class="dashboard-content__notification">На этой странице можно проверить состояние компьютеров</span>
+      </div>
+      <div class="dashboard-content__container">
+        <div class="dashboard-content__row">
+          <table class="monitoring-table">
+            <tr class="monitoring-table__row">
+              <th class="monitoring-table__cell">ID</th>
+              <th class="monitoring-table__cell">Имя устройства</th>
+              <th class="monitoring-table__cell">IP</th>
+              <th class="monitoring-table__cell">Статус</th>
+              <th class="monitoring-table__cell">Ping</th>
+              <th class="monitoring-table__cell">Скорость</th>
+            </tr>
+            <tr class="monitoring-table__row">
+              <td class="monitoring-table__cell">1</td>
+              <td class="monitoring-table__cell">PC 1</td>
+              <td class="monitoring-table__cell">192.168.0.1</td>
+              <td class="monitoring-table__cell">Доступен</td>
+              <td class="monitoring-table__cell">0.2ms</td>
+              <td class="monitoring-table__cell">4 Mb/s</td>
+            </tr>
+            <tr class="monitoring-table__row">
+              <td class="monitoring-table__cell">2</td>
+              <td class="monitoring-table__cell">PC TWO</td>
+              <td class="monitoring-table__cell">192.168.0.2</td>
+              <td class="monitoring-table__cell">Доступен</td>
+              <td class="monitoring-table__cell">0.2ms</td>
+              <td class="monitoring-table__cell">4 Mb/s</td>
+            </tr>
+            <tr class="monitoring-table__row">
+              <td class="monitoring-table__cell">3</td>
+              <td class="monitoring-table__cell">PC three</td>
+              <td class="monitoring-table__cell">192.168.0.3</td>
+              <td class="monitoring-table__cell">Доступен</td>
+              <td class="monitoring-table__cell">0.2ms</td>
+              <td class="monitoring-table__cell">4 Mb/s</td>
+            </tr>
+            <tr class="monitoring-table__row">
+              <td class="monitoring-table__cell">4</td>
+              <td class="monitoring-table__cell">PC 4</td>
+              <td class="monitoring-table__cell">192.168.0.4</td>
+              <td class="monitoring-table__cell">Доступен</td>
+              <td class="monitoring-table__cell">0.2ms</td>
+              <td class="monitoring-table__cell">4 Mb/s</td>
+            </tr>
+          </table>
+        </div>
+        <div class="dashboard-content__row">
+          <div class="widget-medium">
+            <div class="widget-medium__title">Информация о ПК</div>
+            <p class="widget-medium__description">Платформа: <%= sysinfo %></p>
+            <p class="widget-medium__description">Операционная система:</p>
+            <p class="widget-medium__description">Платформа:</p>
+            <p class="widget-medium__description">Платформа:</p>
+            <p class="widget-medium__description">Платформа:</p>
+            <p class="widget-medium__description">Платформа:</p>
+            <p class="widget-medium__description">Платформа:</p>
+          </div>
+          <div class="widget-medium-s">
+            <div class="widget-medium-s__title">CPU, RAM</div>
+            <div class="widget-medium-s-block">
+              <div class="widget-medium-s-top">
+                <div class="widget-medium-s__inline widget-medium-s__inline--left">Название</div>
+                <div class="widget-medium-s__inline widget-medium-s__inline--right">10</div>
+              </div>
+              <div class="widget-medium-s-bottom">
+                <div class="widget-medium-s__status" style="width: 50%;" count="1"></div>
+              </div>
+            </div>
+            <div class="widget-medium-s-block">
+              <div class="widget-medium-s-top">
+                <div class="widget-medium-s__inline widget-medium-s__inline--left">Название</div>
+                <div class="widget-medium-s__inline widget-medium-s__inline--right">101</div>
+              </div>
+              <div class="widget-medium-s-bottom">
+                <div class="widget-medium-s__status" style="width: 80%;" count="2"></div>
+              </div>
+            </div>
+            <div class="widget-medium-s-block">
+              <div class="widget-medium-s-top">
+                <div class="widget-medium-s__inline widget-medium-s__inline--left">Название</div>
+                <div class="widget-medium-s__inline widget-medium-s__inline--right">101</div>
+              </div>
+              <div class="widget-medium-s-bottom">
+                <div class="widget-medium-s__status" style="width: 80%;" count="3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/app.js"></script>
+<script src="./js/script_constructor.js"></script>

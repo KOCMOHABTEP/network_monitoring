@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>SMDM Webpage</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/app.css"/>
+  </head>
+</html>
+<body>
+  <header class="dashboard-header">
+    <div class="dashboard-logo"><img class="dashboard-logo__image" src="./img/logo.png"/><span class="dashboard-logo__name">LabConstruct</span></div><a class="dashboard-user" href="#">
+      <div class="dashboard-user__image"><img class="dashboard-user__photo" src="./img/user.jpg"/></div>
+      <div class="dashboard-user__name">Дмитрий Смирнов</div></a>
+  </header>
+  <div class="dashboard-inner">
+    <div class="dashboard-sidebar">
+      <ul class="dashboard-sidebar__menu-list">
+        <li class="dashboard-sidebar__menu-item active"><a class="dashboard-sidebar__menu-link icon-dashboard" href="#">Dashboard</a></li>
+        <li class="dashboard-sidebar__menu-item"> <a class="dashboard-sidebar__menu-link icon-constructor" href="#">Конструктор</a></li>
+        <li class="dashboard-sidebar__menu-item"> <a class="dashboard-sidebar__menu-link icon-monitoring" href="#">Мониторинг</a></li>
+        <li class="dashboard-sidebar__menu-item"> <a class="dashboard-sidebar__menu-link icon-notification" href="#">Уведомления</a></li>
+      </ul>
+    </div>
+    <div class="dashboard-content">
+      <div class="dashboard-content__message">
+        <h1 class="dashboard-content__title">Dashboard</h1><span class="dashboard-content__notification">
+           Добро пожаловать <span class="js-name">Дмитрий </span>, последний вход в ПУ был выполнен <span class="js-date">29.04.2018</span> в <span class="js-time">17:08</span></span>
+      </div>
+      <div class="dashboard-content__container">
+        <div class="dashboard-content__row">
+          <div class="widget-small">
+            <div class="widget-small__circle icon-views"></div>
+            <div class="widget-small-info">
+              <div class="widget-small__title">Скорость сервера</div>
+              <div class="widget-small__count">123,333</div>
+            </div>
+          </div>
+          <div class="widget-small">
+            <div class="widget-small__circle icon-views"></div>
+            <div class="widget-small-info">
+              <div class="widget-small__title">Устройств в сети</div>
+              <div class="widget-small__count">123,333</div>
+            </div>
+          </div>
+          <div class="widget-small">
+            <div class="widget-small__circle icon-views"></div>
+            <div class="widget-small-info">
+              <div class="widget-small__title">IP Адресов</div>
+              <div class="widget-small__count">123,333</div>
+            </div>
+          </div>
+          <div class="widget-small">
+            <div class="widget-small__circle icon-views"></div>
+            <div class="widget-small-info">
+              <div class="widget-small__title">Total views</div>
+              <div class="widget-small__count">123,333</div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-content__row">
+          <div class="widget-medium">
+            <div class="widget-medium__title">Информация о ПК</div>
+            <p class="widget-medium__description"><%=test %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/app.js"></script>
+<script src="./js/script_constructor.js"></script>

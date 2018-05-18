@@ -1,28 +1,15 @@
 include partials/header.pug
 body
-    //- header.dashboard-header
-    //-     .dashboard-logo
-    //-         img.dashboard-logo__image(src="./img/logo.png")
-    //-         span.dashboard-logo__name LabConstruct
-    //-     a(href="#").dashboard-user
-    //-         .dashboard-user__image
-    //-             img.dashboard-user__photo(src="./img/user.jpg")
-    //-         .dashboard-user__name Дмитрий Смирнов
+    header.dashboard-header
+        .dashboard-logo
+            img.dashboard-logo__image(src="./img/logo.png")
+            span.dashboard-logo__name LabConstruct
+        a(href="#").dashboard-user
+            .dashboard-user__image
+                img.dashboard-user__photo(src="./img/user.jpg")
+            .dashboard-user__name Дмитрий Смирнов
     .dashboard-inner
         .dashboard-sidebar
-            .dashboard-sidebar__main-logo
-                img.dashboard-sidebar__logo-image(src="./img/logo.png")
-                span.dashboard-sidebar__logo-title LabConstruct
-                i.dashboard-sidebar__burger
-                    span
-                    span
-            .dashboard-sidebar__user
-                .dashboard-sidebar__user-image
-                    img(src="./img/user.jpg").dashboard-sidebar__user-img
-                .dashboard-sidebar__user-text
-                    .dashboard-sidebar__user-name Admin
-                    .dashboard-sidebar__user-group Администратор
-
             ul.dashboard-sidebar__menu-list
                 li.dashboard-sidebar__menu-item.active
                     a(href="#").dashboard-sidebar__menu-link.icon-dashboard Dashboard
@@ -32,46 +19,49 @@ body
                     a(href="#").dashboard-sidebar__menu-link.icon-monitoring Мониторинг
                 li.dashboard-sidebar__menu-item 
                     a(href="#").dashboard-sidebar__menu-link.icon-notification Уведомления
-                li.dashboard-sidebar__menu-item 
-                    a(href="#").dashboard-sidebar__menu-link.icon-log Лог
-                li.dashboard-sidebar__menu-item 
-                    a(href="#").dashboard-sidebar__menu-link.icon-database База данных
         .dashboard-content
             .dashboard-content__message
-                h1.dashboard-content__title Dashboard
-                span.dashboard-content__notification 
-                    | Добро пожаловать 
-                    span.js-name Дмитрий 
-                    | , последний вход в ПУ был выполнен 
-                    span.js-date 29.04.2018
-                    |  в 
-                    span.js-time 17:08
+                h1.dashboard-content__title Мониторинг
+                span.dashboard-content__notification На этой странице можно проверить состояние компьютеров
             .dashboard-content__container
                 .dashboard-content__row
-                    //- 1 widget-small
-                    .widget-small
-                        .widget-small__circle.icon-speed
-                        .widget-small-info
-                            .widget-small__title Скорость сервера
-                            .widget-small__count 123,333
-                    //- 2 widget-small
-                    .widget-small
-                        .widget-small__circle.icon-vendor
-                        .widget-small-info
-                            .widget-small__title Устройств в сети
-                            .widget-small__count 123,333
-                    //- 3 widget-small
-                    .widget-small
-                        .widget-small__circle.icon-uptime
-                        .widget-small-info
-                            .widget-small__title IP Адресов
-                            .widget-small__count 123,333
-                    //- 4 widget-small
-                    .widget-small
-                        .widget-small__circle.icon-disk
-                        .widget-small-info
-                            .widget-small__title Память
-                            .widget-small__count 123,333
+                    table.monitoring-table
+                        tr.monitoring-table__row
+                            th.monitoring-table__cell ID
+                            th.monitoring-table__cell Имя устройства
+                            th.monitoring-table__cell IP
+                            th.monitoring-table__cell Статус
+                            th.monitoring-table__cell Ping
+                            th.monitoring-table__cell Скорость
+                        tr.monitoring-table__row
+                            td.monitoring-table__cell 1
+                            td.monitoring-table__cell PC 1
+                            td.monitoring-table__cell 192.168.0.1
+                            td.monitoring-table__cell Доступен
+                            td.monitoring-table__cell 0.2ms
+                            td.monitoring-table__cell 4 Mb/s
+                        tr.monitoring-table__row
+                            td.monitoring-table__cell 2
+                            td.monitoring-table__cell PC TWO
+                            td.monitoring-table__cell 192.168.0.2
+                            td.monitoring-table__cell Доступен
+                            td.monitoring-table__cell 0.2ms
+                            td.monitoring-table__cell 4 Mb/s
+                        tr.monitoring-table__row
+                            td.monitoring-table__cell 3
+                            td.monitoring-table__cell PC three
+                            td.monitoring-table__cell 192.168.0.3
+                            td.monitoring-table__cell Доступен
+                            td.monitoring-table__cell 0.2ms
+                            td.monitoring-table__cell 4 Mb/s
+                        tr.monitoring-table__row
+                            td.monitoring-table__cell 4
+                            td.monitoring-table__cell PC 4
+                            td.monitoring-table__cell 192.168.0.4
+                            td.monitoring-table__cell Доступен
+                            td.monitoring-table__cell 0.2ms
+                            td.monitoring-table__cell 4 Mb/s
+
                 .dashboard-content__row
                     .widget-medium
                         .widget-medium__title Информация о ПК

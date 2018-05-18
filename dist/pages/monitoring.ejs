@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>SMDM Webpage</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="shortcut icon" href="./../img/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./../css/app.css"/>
+  </head>
+</html>
+<body>
+  <div class="dashboard-inner">
+    <div class="dashboard-sidebar">
+      <div class="dashboard-sidebar__main-logo"><img class="dashboard-sidebar__logo-image" src="./../img/logo.png"/><span class="dashboard-sidebar__logo-title">LabConstruct</span><i class="dashboard-sidebar__burger"><span></span><span></span></i></div>
+      <div class="dashboard-sidebar__user">
+        <div class="dashboard-sidebar__user-image"><img class="dashboard-sidebar__user-img" src="./../img/user.jpg"/></div>
+        <div class="dashboard-sidebar__user-text">
+          <div class="dashboard-sidebar__user-name">Admin</div>
+          <div class="dashboard-sidebar__user-group">Администратор</div>
+        </div>
+      </div>
+      <ul class="dashboard-sidebar__menu-list">
+        <li class="dashboard-sidebar__menu-item "><a class="dashboard-sidebar__menu-link icon-dashboard" href="#">Dashboard</a></li>
+        <li class="dashboard-sidebar__menu-item"> <a class="dashboard-sidebar__menu-link icon-constructor" href="#">Конструктор</a></li>
+        <li class="dashboard-sidebar__menu-item active"> <a class="dashboard-sidebar__menu-link icon-monitoring" href="#">Мониторинг</a></li>
+        <li class="dashboard-sidebar__menu-item"> <a class="dashboard-sidebar__menu-link icon-notification" href="#">Уведомления</a></li>
+        <li class="dashboard-sidebar__menu-item"> <a class="dashboard-sidebar__menu-link icon-log" href="#">Лог</a></li>
+        <li class="dashboard-sidebar__menu-item"> <a class="dashboard-sidebar__menu-link icon-database" href="#">База данных</a></li>
+      </ul>
+    </div>
+    <div class="dashboard-content">
+      <div class="dashboard-content__message">
+        <h1 class="dashboard-content__title">Мониторинг</h1><span class="dashboard-content__notification">На этой странице можно проверить состояние компьютеров</span>
+      </div>
+      <div class="dashboard-content__container">
+        <div class="dashboard-content__row">
+          <table class="monitoring-table">
+            <tr class="monitoring-table__row">
+              <th class="monitoring-table__cell">ID</th>
+              <th class="monitoring-table__cell">Имя устройства</th>
+              <th class="monitoring-table__cell">IP</th>
+              <th class="monitoring-table__cell">MAC</th>
+              <th class="monitoring-table__cell">Поставщик</th>
+              <th class="monitoring-table__cell">Операционная система</th>
+              <th class="monitoring-table__cell">Ping</th>
+            </tr>
+            <% for(var i=0, j=1; i < scanning.length; i++,j++) { %>
+            <tr class="monitoring-table__row">
+              <td class="monitoring-table__cell"><%= j %></td>
+              <td class="monitoring-table__cell"><%= scanning[i].hostname%></td>
+              <td class="monitoring-table__cell"><%= scanning[i].ip%></td>
+              <td class="monitoring-table__cell"><%= scanning[i].mac%></td>
+              <td class="monitoring-table__cell"><%= scanning[i].vendor%></td>
+              <td class="monitoring-table__cell"><%= scanning[i].osNmap%></td>
+              <td class="monitoring-table__cell">4 ms</td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+        <div class="dashboard-content__row">
+          <div class="widget-medium">
+            <div class="widget-chart">
+              <canvas  id="myChart" class="widget-canvas" width="400" height="400"></canvas>
+            </div>
+          </div>
+          <div class="widget-medium-s">
+            <div class="widget-medium-s__title">Информация об подключении</div>
+            <div class="widget-medium-s-block">
+              <div class="widget-medium-s-top widget-medium-s-top--dashed">
+                <div class="widget-medium-s__inline widget-medium-s__inline--left">Подключение:</div>
+                <div class="widget-medium-s__inline widget-medium-s__inline--right"><%=netdevice.name%></div>
+              </div>
+            </div>
+            <div class="widget-medium-s-block">
+              <div class="widget-medium-s-top widget-medium-s-top--dashed">
+                <div class="widget-medium-s__inline widget-medium-s__inline--left">Поставщик:</div>
+                <div class="widget-medium-s__inline widget-medium-s__inline--right"><%=netdevice.vendor%></div>
+              </div>
+            </div>
+            <div class="widget-medium-s-block">
+              <div class="widget-medium-s-top widget-medium-s-top--dashed">
+                <div class="widget-medium-s__inline widget-medium-s__inline--left">Контроллер:</div>
+                <div class="widget-medium-s__inline widget-medium-s__inline--right"><%=netdevice.model%></div>
+              </div>
+            </div>
+            <div class="widget-medium-s-block">
+              <div class="widget-medium-s-top widget-medium-s-top--dashed">
+                <div class="widget-medium-s__inline widget-medium-s__inline--left">Тип соединения:</div>
+                <div class="widget-medium-s__inline widget-medium-s__inline--right"><%=netdevice.type%></div>
+              </div>
+            </div>
+            <div class="widget-medium-s-block">
+              <div class="widget-medium-s-top widget-medium-s-top--dashed">
+                <div class="widget-medium-s__inline widget-medium-s__inline--left">Маска сети:</div>
+                <div class="widget-medium-s__inline widget-medium-s__inline--right"><%=netdevice.netmask%></div>
+              </div>
+            </div>
+            <div class="widget-medium-s-block">
+              <div class="widget-medium-s-top widget-medium-s-top--dashed">
+                <div class="widget-medium-s__inline widget-medium-s__inline--left">Сетевой шлюз:</div>
+                <div class="widget-medium-s__inline widget-medium-s__inline--right"><%=netdevice.gateway_ip%></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./../js/app.js"></script>
+<script src="./../js/Chart.js"></script>
+<script src="./../js/monitoring.js"></script>

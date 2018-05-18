@@ -119,11 +119,11 @@ gulp.task('js:build',  () => {
 
 gulp.task('style:build',  () => {
     gulp.src(path.src.style)
-        .pipe(wait(500))
+        //.pipe(wait(500))
         .pipe(sass({
             includePaths: ['.src/assets/style/patrials','.src/assets/style/plugins'],
             outputStyle: 'expanded',
-        }))
+        }).on('error',sass.logError))
         //.pipe(postcss([autoprefixer({browsers: ["> 0%"]})]))
         .pipe(prefixer())
         .pipe(gulp.dest(path.build.css))
