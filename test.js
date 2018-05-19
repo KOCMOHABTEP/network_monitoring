@@ -26,7 +26,7 @@ var location = path.join(__dirname, 'dist/');
     nmapscan.on('complete',function(data){
     
         app.locals.scanning = data;
-        //console.log(util.inspect(app.locals.scanning,{colors: true, depth: 4}))
+        console.log(util.inspect(app.locals.scanning,{colors: true, depth: 4}))
         //console.log(res.locals.scanning);
     });
     
@@ -159,6 +159,13 @@ app.get('/monitoring', function (req, res) {
         scanning: app.locals.scanning,
         netdevice: app.locals.networkInformation
     })
+    res.end();
+})
+app.get('/notification', function (req, res) {
+    // res.render('pages/notification', {
+    //     scanning: app.locals.scanning,
+    //     netdevice: app.locals.networkInformation
+    // })
     res.end();
 })
 
