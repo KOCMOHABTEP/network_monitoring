@@ -1374,10 +1374,16 @@ $loopColor: #4f4db7, #b74cb4, #ff3bb2, #ef406c, invert(#4f4db7), invert(#b74cb4)
         left: 0;
     }
     
-    $n: 0;
 
+    $loopColor: #4f4db7, 
+    #b74cb4, 
+    #ff3bb2, 
+    #ef406c, 
+    invert(#4f4db7), 
+    invert(#b74cb4), 
+    invert(#ff3bb2), 
+    invert(#ef406c);
     @for $i from 1 through length($loopColor) {
-        $n: $n + 1;
         &:nth-child(#{$i})::after {
             background: linear-gradient(to right, nth($loopColor, $i), nth($loopColor, 4))
         }

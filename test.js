@@ -91,7 +91,8 @@ app.use(function (req, res, next) {
         next();
     })
 })
-// Процентное соотношение
+
+
 app.use(function (req, res, next) {
     si.fsSize(function (fssize) {
         //console.log('Занято на диске:')
@@ -103,6 +104,8 @@ app.use(function (req, res, next) {
         next();
     })
 })
+
+
 app.use(function (req, res, next) {
     si.currentLoad(function (load) {
         //console.log('Нагрузка на CPU:')

@@ -47,15 +47,15 @@
               <th class="monitoring-table__cell">Операционная система</th>
               <th class="monitoring-table__cell">Ping</th>
             </tr>
-            <% for(var i=0, j=1; i < scanning.length; i++,j++) { %>
+            <% for(var i=0; i < scanning.length; i++) { %>
             <tr class="monitoring-table__row">
-              <td class="monitoring-table__cell"><%= j %></td>
+              <td class="monitoring-table__cell"><%= i %></td>
               <td class="monitoring-table__cell"><%= scanning[i].hostname%></td>
               <td class="monitoring-table__cell"><%= scanning[i].ip%></td>
               <td class="monitoring-table__cell"><%= scanning[i].mac%></td>
               <td class="monitoring-table__cell"><%= scanning[i].vendor%></td>
               <td class="monitoring-table__cell"><%= scanning[i].osNmap%></td>
-              <td class="monitoring-table__cell">4 ms</td>
+              <td class="monitoring-table__cell"><%= scanning[i].ping%></td>
             </tr>
             <% } %>
           </table>
